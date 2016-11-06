@@ -1,14 +1,3 @@
---[[
-
-     **************************
-     *  BlackPlus Plugins...  *
-     *                        *
-     *     By @MehdiHS        *
-     *                        *
-     *  Channel > @Black_Ch   *
-     **************************
-	 
-]]
 local function run(msg, matches)
     local link = 'Xnxx\nhttp://www.xnxx.com/?k='..URL.escape(matches[1])
     local link = link..'\nBeeg\nhttp://beeg.com/search?q='..URL.escape(matches[1])
@@ -26,14 +15,3 @@ return {
     },
 run = run
 }
---[[
-
-     **************************
-     *  BlackPlus Plugins...  *
-     *                        *
-     *     By @MehdiHS        *
-     *                        *
-     *  Channel > @Black_Ch   *
-     **************************
-	 
-]]
