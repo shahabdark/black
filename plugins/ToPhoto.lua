@@ -12,7 +12,7 @@
 local function tosticker(msg, success, result)
   local receiver = get_receiver(msg)
   if success then
-    local file = '/root/blackplus/data/stickers/'..msg.from.id..'.jpg'
+    local file = '/root/black/data/photo/'..msg.from.id..'.jpg'
     print('File downloaded to:', result)
     os.rename(result, file)
     print('File moved to:', file)
