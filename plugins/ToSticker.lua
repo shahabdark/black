@@ -1,18 +1,7 @@
---[[
-
-     **************************
-     *  BlackPlus Plugins...  *
-     *                        *
-     *     By @MehdiHS        *
-     *                        *
-     *  Channel > @Black_Ch   *
-     **************************
-	 
-]]
 local function tosticker(msg, success, result)
   local receiver = get_receiver(msg)
   if success then
-    local file = '/root/blackplus/data/stickers/'..msg.from.id..'.webp'
+    local file = '/root/black/plugins/stickers/'..msg.from.id..'.webp'
     print('File downloaded to:', result)
     os.rename(result, file)
     print('File moved to:', file)
