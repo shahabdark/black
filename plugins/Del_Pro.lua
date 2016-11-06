@@ -1,22 +1,11 @@
---[[
-
-     **************************
-     *  BlackPlus Plugins...  *
-     *                        *
-     *     By @MehdiHS        *
-     *                        *
-     *  Channel > @Black_Ch   *
-     **************************
-	 
-]]
 local function history(extra, suc, result)
   for i=1, #result do
     delete_msg(result[i].id, ok_cb, false)
   end
   if tonumber(extra.con) == #result then
-    send_msg(extra.chatid, '"'..#result..'" Msgs Has Been Removed. ', ok_cb, false)
+    send_msg(extra.chatid, '"'..#result..'" #Done. ', ok_cb, false)
   else
-    send_msg(extra.chatid, '"'..#result..'" Msgs Has Been Removed. ', ok_cb, false)
+    send_msg(extra.chatid, '"'..#result..'" #Done. ', ok_cb, false)
   end
 end
 local function run(msg, matches)
@@ -41,14 +30,3 @@ return {
     },
     run = run
 }
---[[
-
-     **************************
-     *  BlackPlus Plugins...  *
-     *                        *
-     *     By @MehdiHS        *
-     *                        *
-     *  Channel > @Black_Ch   *
-     **************************
-	 
-]]
