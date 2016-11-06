@@ -556,15 +556,3 @@ return {
 	patterns = {},
 	pre_process = pre_process
 }
-
---[[
-
-     **************************
-     *  BlackPlus Plugins...  *
-     *                        *
-     *     By @MehdiHS        *
-     *                        *
-     *  Channel > @Black_Ch   *
-     **************************
-	 
-]]
