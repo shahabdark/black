@@ -1,14 +1,3 @@
---[[
-
-     **************************
-     *  BlackPlus Plugins...  *
-     *                        *
-     *     By @MehdiHS        *
-     *                        *
-     *  Channel > @Black_Ch   *
-     **************************
-	 
-]]
 do
 
 -- Returns the key (index) in the config.enabled_plugins table
@@ -220,9 +209,9 @@ return {
           },
   patterns = {
     "^!plugins$",
-    "^[Pp]lx? (-) ([%w_%.%-]+)",
+    "^[Pp]l? (-) ([%w_%.%-]+)",
     "^[Pp]lug? (+) ([%w_%.%-]+) (chat)",
-    "^[Pp]lx? (+) ([%w_%.%-]+)",
+    "^[Pp]l? (+) ([%w_%.%-]+)",
     "^[Pp]lug? (-) ([%w_%.%-]+) (chat)" },
   run = run,
   moderated = true, -- set to moderator mode
@@ -230,14 +219,3 @@ return {
 }
 
 end
---[[
-
-     **************************
-     *  BlackPlus Plugins...  *
-     *                        *
-     *     By @MehdiHS        *
-     *                        *
-     *  Channel > @Black_Ch   *
-     **************************
-	 
-]]
