@@ -123,10 +123,10 @@ local function kick_ban_res(extra, success, result)
         redis:srem(hash, member_id)
         return 'Done\n User Unbanned'
       elseif get_cmd == 'banall' then
-        send_large_msg(receiver, '> ['..user_id..' ] Banned for all Groups/SuperGroups! (Globally banned)')
+        send_large_msg(receiver, '>Done\n ['..user_id..' ] Banned for all Groups/SuperGroups! (Globally banned)')
 		banall_user(member_id)
       elseif get_cmd == 'unbanall' then
-        send_large_msg(receiver, '> ['..user_id..' ] Unbanned for all Groups/SuperGroups! (Unglobally banned)')
+        send_large_msg(receiver, '>Done\n ['..user_id..' ] Unbanned for all Groups/SuperGroups! (Unglobally banned)')
 	    unbanall_user(member_id)
     end
 end
@@ -193,7 +193,7 @@ local support_id = msg.from.id
 		local receiver = get_receiver(msg)
         savelog(msg.to.id, name.." ["..msg.from.id.."] baned user ".. matches[2])
         ban_user(matches[2], msg.to.id)
-		send_large_msg(receiver, 'Done\n'..user_id..' Banned')
+		send_large_msg(receiver, '>Done\n'..user_id..' Banned')
       else
 		local cbres_extra = {
 		chat_id = msg.to.id,
@@ -221,7 +221,7 @@ local support_id = msg.from.id
         	local print_name = user_print_name(msg.from):gsub("‮", "")
 			local name = print_name:gsub("_", "")
         	savelog(msg.to.id, name.." ["..msg.from.id.."] unbaned user ".. matches[2])
-        	return 'Done\n'..user_id..' Unbanned'
+        	return '>Done\n'..user_id..' Unbanned'
       else
 		local cbres_extra = {
 			chat_id = msg.to.id,
@@ -286,7 +286,7 @@ end
          	return false
         end
         	banall_user(targetuser)
-       		return '> ['..user_id..' ] Banned for all Groups/SuperGroups! (Globally banned)'
+       		return '>Done\n ['..user_id..' ] Banned for all Groups/SuperGroups! (Globally banned)'
      else
 	local cbres_extra = {
 		chat_id = msg.to.id,
@@ -306,7 +306,7 @@ end
           	return false
         end
        		unbanall_user(user_id)
-        	return '> ['..user_id..' ] Unbanned for all Groups/SuperGroups! (Unglobally banned)'
+        	return '>Done\n ['..user_id..' ] Unbanned for all Groups/SuperGroups! (Unglobally banned)'
     else
 		local cbres_extra = {
 			chat_id = msg.to.id,
