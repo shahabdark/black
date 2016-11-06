@@ -1,15 +1,3 @@
---[[
-
-     **************************
-     *  BlackPlus Plugins...  *
-     *                        *
-     *     By @MehdiHS        *
-     *                        *
-     *  Channel > @Black_Ch   *
-     **************************
-	 
-]]
-
 do
 local function get_msgs_user_chat(user_id, chat_id)
   local user_info = {}
@@ -68,7 +56,7 @@ end
       local hashs = 'msgs:'..result.peer_id..':'..extra.msg.to.id
       local msgss = redis:get(hashs)
       local percent = msgss / r * 100
-    return send_large_msg(chatid, "نام شما : "..name.."\nتعداد پیام ها ارسالی توسط شما : "..msgss.." ("..round2(percent).."%)\n  تمام پیام های ارسال شده در گروه: "..r.."")
+    return send_large_msg(chatid, "Your name : "..name.."\nYou've sent : "..msgss.." ("..round2(percent).."%)\n  messages and this group has "..r.." messages.")
 
     end
 end
@@ -84,14 +72,3 @@ end
     run = run
   }
 end
---[[
-
-     **************************
-     *  BlackPlus Plugins...  *
-     *                        *
-     *     By @MehdiHS        *
-     *                        *
-     *  Channel > @Black_Ch   *
-     **************************
-	 
-]]
