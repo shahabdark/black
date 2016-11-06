@@ -1,14 +1,3 @@
---[[
-
-     **************************
-     *  BlackPlus Plugins...  *
-     *                        *
-     *     By @MehdiHS        *
-     *                        *
-     *  Channel > @Black_Ch   *
-     **************************
-	 
-]]
 local function addword(msg, name)
     local hash = 'chat:'..msg.to.id..':badword'
     redis:hset(hash, name, 'newword')
@@ -82,7 +71,7 @@ function clear_commandsbad(msg, cmd_name)
 end
 
 local function run(msg, matches)
-  if matches[2] == 'filter' then
+  if matches[2] == 'addword' then
   if not is_momod(msg) then
    return ''
   end
@@ -97,7 +86,7 @@ local function run(msg, matches)
 if not is_momod(msg) then return '' end
   local asd = '1'
     return clear_commandbad(msg, asd)
-  elseif matches[2] == 'remword' or matches[2] == 'rw' then
+  elseif matches[2] == 'remword' or matches[2] == 'delword' then
    if not is_momod(msg) then return '' end
     return clear_commandsbad(msg, matches[3])
   else
@@ -109,8 +98,8 @@ end
 
 return {
   patterns = {
-  "^([#!/])(rw) (.*)$",
-  "^([#!/])(filter) (.*)$",
+  "^([#!/])(delword) (.*)$",
+  "^([#!/])(addword) (.*)$",
   "^([#!/])(filterlist)$",
   "^([#!/])(remword) (.*)$",
   "^([#!/])(badwords)$",
@@ -120,14 +109,3 @@ return {
   },
   run = run
 }
---[[
-
-     **************************
-     *  BlackPlus Plugins...  *
-     *                        *
-     *     By @MehdiHS        *
-     *                        *
-     *  Channel > @Black_Ch   *
-     **************************
-	 
-]]
