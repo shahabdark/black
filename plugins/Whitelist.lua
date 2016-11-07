@@ -85,7 +85,7 @@ return {
     patterns = {
 	  "^[#!/](whitelist)$",
       "^[#!/](whitelist) (.*)$",
-	  "^[#!/](clean) (.*)$"
+	  "^[#!/](clean) (.*)$",
 	  "^([Ww]hitelist)$",
       "^([Ww]hitelist) (.*)$",
 	  "^([Cc]lean) (.*)$"
@@ -93,14 +93,3 @@ return {
     run = run
 }
 end
---[[
-
-     **************************
-     *  BlackPlus Plugins...  *
-     *                        *
-     *     By @MehdiHS        *
-     *                        *
-     *  Channel > @Black_Ch   *
-     **************************
-	 
-]]
