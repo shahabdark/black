@@ -1,4 +1,4 @@
-# [Extreme](https;//telegram.me/extremeb0t) > [GitHub](https://GitHub.com/iiborn/bIack) | [Developer](https://telegram.me/iborn)
+# [Extreme](https;//telegram.me/extremeb0t) > [GitHub](https://GitHub.com/iiborn/bIack) > [channel](https://telegram.me/extreme_ch) | [Developer](https://telegram.me/iborn)
 * * *
 *New Bot For Manage Your SuperGroups.
 
