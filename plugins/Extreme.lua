@@ -106,7 +106,7 @@ local function run(msg, matches)
     savelog(msg.to.id, name.." ["..msg.from.id.."] requested group stats ")
     return chat_stats2(chat_id)
   end
-  if matches[1]:lower() == "stats" then
+  if matches[1]:lower() == "point" then
     if not matches[2] then
       if not is_momod(msg) then
         return "*You're Not Allowed."
@@ -143,11 +143,11 @@ return {
     "^[#!/]([Ss]tats)$",
     "^[#!/]([Ss]tatslist)$",
     "^[#!/]([Ss]tats) (group) (%d+)",
-    "^[#!/]([Ss]tats) (extreme)",
+    "^[#!/]([Pp]oint) (extreme)",
     "^([Ss]tats)$",
     "^([Ss]tatslist)$",
     "^([Ss]tats) (group) (%d+)",
-    "^([Ss]tats) (extreme)",
+    "^([Pp]oint) (extreme)",
     }, 
   run = run
 }
