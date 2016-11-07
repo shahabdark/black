@@ -130,7 +130,7 @@ else
   
   #Adding some color. By @iborn
    echo -e "\033[38;5;208m"
-   echo -e "     > Channel : ----------                       "
+   echo -e "     > Channel : @extreme_ch                      "
    echo -e "     > Developer : @iborn                         "
    echo -e "     > Bot ID : @extremer0b                       "
    echo -e "     > Github : GitHub.com/iiborn/Black           "
