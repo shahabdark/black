@@ -1,14 +1,4 @@
---[[
 
-     **************************
-     *  BlackPlus Plugins...  *
-     *                        *
-     *     By @MehdiHS        *
-     *                        *
-     *  Channel > @Black_Ch   *
-     **************************
-	 
-]]
 do
 
 function run(msg, matches)
@@ -22,7 +12,7 @@ function run(msg, matches)
        end
          local text = "*Group link  :\n"..group_link
           send_large_msg('user#id'..msg.from.id, text.."\n", ok_cb, false)
-           return "Group Link Sent On Your Pv!"
+           return ">Done."
 end
 
 return {
@@ -34,14 +24,3 @@ return {
 }
 
 end
---[[
-
-     **************************
-     *  BlackPlus Plugins...  *
-     *                        *
-     *     By @MehdiHS        *
-     *                        *
-     *  Channel > @Black_Ch   *
-     **************************
-	 
-]]
