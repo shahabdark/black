@@ -243,7 +243,6 @@ function create_config( )
     "feedback",
     "InPm",
     "InRealm",
-    "StickerMaker",
     "uptime",
     "tools",
     "mute",
