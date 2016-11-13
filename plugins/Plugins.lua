@@ -42,7 +42,7 @@ local function list_all_plugins(only_enabled)
       text = text..nsum..'. '..v..'  '..status..'\n'
     end
   end
-  local text = text..'\nBot Version > 6.9'
+  local text = text..'\nExtreme Version > 6.1'
   return text
 end
 
@@ -67,7 +67,7 @@ local function list_plugins(only_enabled)
       text = text..v..'  '..status..'\n'
     end
   end
-  local text = text..'\nBot Version > 6.9'
+  local text = text..'\nExtreme Version > 6.1'
   return text
 end
 
