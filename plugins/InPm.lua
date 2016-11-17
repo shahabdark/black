@@ -208,7 +208,7 @@ if to == 'user' or service or is_admin1(msg) and to == "chat" or to == "channel"
 
 	if matches[1] == 'help' and msg.to.type == 'user' or matches[1] == 'pmhelp' and is_admin1(msg) and msg.to.type ~= 'user' then
       	savelog(msg.to.id, name_log.." ["..msg.from.id.."] used pm help")
-		text = "Welcome to Extreme!\n\n>To get a new Extreme group, Use /support command to get a support Link! Or Contact a Support Team With @ExtremeSupbot\n\nFor more information, @iborn\nUse #superhelp command to show bot commands!!\n\n#Thanks_for_using Extreme!"
+		text = "🎗 Welcome to Cluna\n\n"
      	return text
     end
 
@@ -243,15 +243,15 @@ end
 
 return {
     patterns = {
-	"^[#!/](help)$",
-	"^[#!/](pmhelp)$",
-	"^[#!/](join) (.*) (support)$",
-    "^[#!/](kickme) (.*)$",
-	"^([Hh]elp)$",
-	"^([Pp]mhelp)$",
-	"^([Jj]oin) (.*) (support)$",
-    "^([Kk]ickme) (.*)$",
-    "^!!tgservice (chat_add_user)$",
+--	"^[#!/](help)$",
+--	"^[#!/](pmhelp)$",
+--	"^[#!/](join) (.*) (support)$",
+  --  "^[#!/](kickme) (.*)$",
+	--"^([Hh]elp)$",
+	--"^([Pp]mhelp)$",
+	--"^([Jj]oin) (.*) (support)$",
+   -- "^([Kk]ickme) (.*)$",
+   -- "^!!tgservice (chat_add_user)$",
     },
     run = run,
 	pre_process = pre_process
