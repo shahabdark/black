@@ -1,11 +1,11 @@
 local function run(msg, matches)
     if matches[1]:lower() == '+' and is_sudo(msg) then
         block_user("user#id"..matches[2],ok_cb,false)
-        return "User blocked"
+        return "⛔️ User blocked"
     end
     if matches[1]:lower() == '-' and is_sudo(msg) then
 	    unblock_user("user#id"..matches[2],ok_cb,false)
-        return "User unblocked"
+        return "✅ User unblocked"
     end
 return {
   patterns = {
