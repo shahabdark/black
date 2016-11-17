@@ -99,7 +99,7 @@ local function run(msg, matches)
   end 
   if matches[1]:lower() == "statslist" then
     if not is_momod(msg) then
-      return "*You're Not Allowed."
+      return "⛔️ You're Not Allowed."
     end
     local chat_id = msg.to.id
     local name = user_print_name(msg.from)
@@ -109,7 +109,7 @@ local function run(msg, matches)
   if matches[1]:lower() == "point" then
     if not matches[2] then
       if not is_momod(msg) then
-        return "*You're Not Allowed."
+        return "⛔️ You're Not Allowed."
       end
       if msg.to.type == 'chat' or msg.to.type == 'channel' then
 	    local receiver = get_receiver(msg)
@@ -123,14 +123,14 @@ local function run(msg, matches)
     end
     if matches[2] == "cluna" then
       if not is_sudo(msg) then
-        return "*You're Not Allowed."
+        return "⛔️ You're Not Allowed."
       else
         return bot_stats()
       end
     end
     if matches[2] == "group" then
       if not is_admin1(msg) then
-        return "For admins only !"
+        return "👤 For admins only !"
       else
         return chat_stats(matches[3])
       end
