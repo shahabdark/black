@@ -1,7 +1,7 @@
 local function addword(msg, name)
     local hash = 'chat:'..msg.to.id..':badword'
     redis:hset(hash, name, 'newword')
-    return "New Word Filtered!\n> "..name
+    return "✅ New Word Filtered!\n> "..name
 end
 
 local function get_variables_hash(msg)
@@ -15,7 +15,7 @@ local function list_variablesbad(msg)
 
   if hash then
     local names = redis:hkeys(hash)
-    local text = 'Filtered Words :\n\n'
+    local text = '💠 Filtered Words :\n\n'
     for i=1, #names do
       text = text..'> '..names[i]..'\n'
     end
@@ -29,7 +29,7 @@ function clear_commandbad(msg, var_name)
   --Save on redis  
   local hash = get_variables_hash(msg)
   redis:del(hash, var_name)
-  return 'Cleaned!'
+  return '✅ Cleaned!'
 end
 
 local function list_variables2(msg, value)
@@ -67,7 +67,7 @@ function clear_commandsbad(msg, cmd_name)
   --Save on redis  
   local hash = get_variables_hash(msg)
   redis:hdel(hash, cmd_name)
-  return ''..cmd_name..'Removed From Filtered List!'
+  return ''..cmd_name..'⛔️ Removed From Filtered List!'
 end
 
 local function run(msg, matches)
@@ -80,7 +80,7 @@ local function run(msg, matches)
   local text = addword(msg, name)
   return text
   end
-  if matches[2] == 'filterlist' then
+  if matches[2] == 'filterlist' or matches[2] == 'badwords' then
   return list_variablesbad(msg)
   elseif matches[2] == 'clearbadwords' then
 if not is_momod(msg) then return '' end
