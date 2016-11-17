@@ -48,7 +48,7 @@ end
 
 function run(msg, matches)
   if not is_sudo(msg) then
-    return "You aren't allowed!"
+    return "⛔️ You aren't allowed!"
   end
   local receiver = get_receiver(msg)
   if string.match(msg.text, '!sh') then
