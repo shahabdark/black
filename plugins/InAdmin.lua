@@ -172,31 +172,31 @@ local function run(msg,matches)
     if matches[1] == "markread" then
     	if matches[2] == "on" then
     		redis:set("bot:markread", "on")
-    		return reply_msg(msg.id, "Done \nMark read > #On", ok_cb, false)
+    		return reply_msg(msg.id, "✅ Done \n🔴 Mark read > On", ok_cb, false)
     	end
     	if matches[2] == "off" then
     		redis:del("bot:markread")
-    		return reply_msg(msg.id, "Done \nMark read > #Off", ok_cb, false)
+    		return reply_msg(msg.id, "✅ Done \n🔴 Mark read > Off", ok_cb, false)
     	end
     	return
     end
     if matches[1] == "pm" then
-    	local text = "Message From "..(msg.from.username or msg.from.last_name).."\n\nMessage : "..matches[3]
+    	local text = "👤 Message From "..(msg.from.username or msg.from.last_name).."\n\n💠 Message : "..matches[3]
     	send_large_msg("user#id"..matches[2],text)
-    	return reply_msg(msg.id, "Message has been sent", ok_cb, false)
+    	return reply_msg(msg.id, "✅ Message has been sent", ok_cb, false)
     end
     
     if matches[1] == "import" then--join by group link
     	local hash = parsed_url(matches[2])
     	import_chat_link(hash,ok_cb,false)
-		return reply_msg(msg.id, "Done!", ok_cb, false)
+		return reply_msg(msg.id, "✅ Done!", ok_cb, false)
     end
     if matches[1] == "contactlist" then
 	    if not is_sudo(msg) then-- Sudo only
     		return reply_msg(msg.id, "You're Not Allowd.", ok_cb, false)
     	end
       get_contact_list(get_contact_list_callback, {target = msg.from.id})
-      return reply_msg(msg.id, "I've sent contact list with both json and text format to your private", ok_cb, false)
+      return reply_msg(msg.id, "✅ I've sent contact list with both json and text forma to your private", ok_cb, false)
     end
  if matches[1] == "sendcontact" and is_sudo(msg) then
     phone = matches[2]
@@ -267,7 +267,7 @@ return {
 	"^[#!/](import) (.*)$",
 	"^[#!/](markread) (on)$",
 	"^[#!/](markread) (off)$",
-	"^[#!/](setbotphoto)$",
+--	"^[#!/](setbotphoto)$",
 	"^[#!/](contactlist)$",
 	"^[#!/](dialoglist)$",
 	"^[#!/](sendcontact) (.*) (.*) (.*)$",
