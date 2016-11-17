@@ -216,7 +216,7 @@ end
 
     if matches[1] == "dialoglist" then
       get_dialog_list(get_dialog_list_callback, {target = msg.from.id})
-      return reply_msg(msg.id, "I've sent a group dialog list with both json and text format to your private messages", ok_cb, false)
+      return reply_msg(msg.id, "✅ I've sent a group dialog list with both json and text format to your private messages", ok_cb, false)
     end
     if matches[1] == "whois" then
       user_info("user#id"..matches[2],user_info_callback,{msg=msg})
@@ -224,7 +224,7 @@ end
 	if matches[1] == 'reload' then
 		receiver = get_receiver(msg)
 		reload_plugins(true)
-		return reply_msg(msg.id, "#BOT Reloaded By |"..msg.from.id.."| \n#All Plugins Reloaded! \n#All Changes Succesfully Installed.", ok_cb, false)
+		return reply_msg(msg.id, "♻️ BOT Reloaded By |"..msg.from.id.."| \n🌐 All Plugins Reloaded! \n🌐 All Changes Succesfully Installed.", ok_cb, false)
 	end
 	if matches[1] == 'updateid' then
 		local data = load_data(_config.moderation.data)
@@ -270,23 +270,23 @@ return {
 --	"^[#!/](setbotphoto)$",
 	"^[#!/](contactlist)$",
 	"^[#!/](dialoglist)$",
-	"^[#!/](sendcontact) (.*) (.*) (.*)$",
-	"^[#!/](mycontact)$",
+--	"^[#!/](sendcontact) (.*) (.*) (.*)$",
+--	"^[#!/](mycontact)$",
 	"^[#/!](reload)$",
-	"^[#/!](updateid)$",
+--	"^[#/!](updateid)$",
 	"^[#/!](addlog)$",
 	"^[#/!](remlog)$",
 	"^([Pp]m) (%d+) (.*)$",
 	"^([Ii]mport) (.*)$",
 	"^([Mm]arkread) (on)$",
 	"^([Mm]arkread) (off)$",
-	"^([Ss]etbotphoto)$",
+--	"^([Ss]etbotphoto)$",
 	"^([Cc]ontactlist)$",
 	"^([Dd]ialoglist)$",
-	"^([Ss]endcontact) (.*) (.*) (.*)$",
-	"^([Mm]ycontact)$",
+--	"^([Ss]endcontact) (.*) (.*) (.*)$",
+--	"^([Mm]ycontact)$",
 	"^([Rr]eload)$",
-	"^([Uu]pdateid)$",
+--	"^([Uu]pdateid)$",
 	"^([Aa]ddlog)$",
 	"^([Rr]emlog)$",
 	"%[(photo)%]",
