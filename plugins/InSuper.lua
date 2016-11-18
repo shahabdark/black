@@ -5,7 +5,7 @@ local function check_member_super(cb_extra, success, result)
   local data = cb_extra.data
   local msg = cb_extra.msg
   if success == 0 then
-	send_large_msg(receiver, "Promote me to admin first!")
+	send_large_msg(receiver, "⛔️ Promote me to admin first!")
   end
   for k,v in pairs(result) do
     local member_id = v.peer_id
@@ -69,7 +69,7 @@ local function check_member_superrem(cb_extra, success, result)
       end
       data[tostring(groups)][tostring(msg.to.id)] = nil
       save_data(_config.moderation.data, data)
-	  local text = 'SuperGroup has been removed'
+	  local text = '⛔️ SuperGroup has been removed'
       return reply_msg(msg.id, text, ok_cb, false)
     end
   end
@@ -194,11 +194,11 @@ local function lock_group_links(msg, data, target)
   end
   local group_link_lock = data[tostring(target)]['settings']['lock_link']
   if group_link_lock == 'yes' then
-    return reply_msg(msg.id,"> #Link posting is #already locked", ok_cb, false)
+    return reply_msg(msg.id,"⛔️ Link posting is already locked", ok_cb, false)
   else
     data[tostring(target)]['settings']['lock_link'] = 'yes'
     save_data(_config.moderation.data, data)
-    return reply_msg(msg.id,"> #Link posting has been #locked", ok_cb, false)
+    return reply_msg(msg.id,"✅ Link posting has been locked", ok_cb, false)
   end
 end
 
@@ -208,11 +208,11 @@ local function unlock_group_links(msg, data, target)
   end
   local group_link_lock = data[tostring(target)]['settings']['lock_link']
   if group_link_lock == 'no' then
-    return reply_msg(msg.id,"> #Link posting is #not locked", ok_cb, false)
+    return reply_msg(msg.id,"⛔️ Link posting is not locked", ok_cb, false)
   else
     data[tostring(target)]['settings']['lock_link'] = 'no'
     save_data(_config.moderation.data, data)
-    return reply_msg(msg.id,"> #Link posting has been #unlocked", ok_cb, false)
+    return reply_msg(msg.id,"✅ Link posting has been unlocked", ok_cb, false)
   end
 end
 
@@ -221,15 +221,15 @@ local function lock_group_spam(msg, data, target)
     return
   end
   if not is_owner(msg) then
-    return reply_msg(msg.id,"*Owners only!", ok_cb, false)
+    return reply_msg(msg.id,"⛔️ Owners only!", ok_cb, false)
   end
   local group_spam_lock = data[tostring(target)]['settings']['lock_spam']
   if group_spam_lock == 'yes' then
-    return reply_msg(msg.id,"> SuperGroup #spam is #already locked", ok_cb, false)
+    return reply_msg(msg.id,"⛔️ SuperGroup spam is already locked", ok_cb, false)
   else
     data[tostring(target)]['settings']['lock_spam'] = 'yes'
     save_data(_config.moderation.data, data)
-    return reply_msg(msg.id,"> SuperGroup #spam has been #locked", ok_cb, false)
+    return reply_msg(msg.id,"✅ SuperGroup spam has been locked", ok_cb, false)
   end
 end
 
@@ -239,11 +239,11 @@ local function unlock_group_spam(msg, data, target)
   end
   local group_spam_lock = data[tostring(target)]['settings']['lock_spam']
   if group_spam_lock == 'no' then
-    return reply_msg(msg.id,"> SuperGroup #spam is #not locked", ok_cb, false)
+    return reply_msg(msg.id,"⛔️ SuperGroup spam is not locked", ok_cb, false)
   else
     data[tostring(target)]['settings']['lock_spam'] = 'no'
     save_data(_config.moderation.data, data)
-    return reply_msg(msg.id,"> SuperGroup #spam has been #unlocked", ok_cb, false)
+    return reply_msg(msg.id,"✅ SuperGroup spam has been unlocked", ok_cb, false)
   end
 end
 
@@ -257,7 +257,7 @@ local function lock_group_flood(msg, data, target)
   else
     data[tostring(target)]['settings']['flood'] = 'yes'
     save_data(_config.moderation.data, data)
-    return reply_msg(msg.id,"> #Spamming has been #locked", ok_cb, false)
+    return reply_msg(msg.id,"✅ Spamming has been locked", ok_cb, false)
   end
 end
 
@@ -271,7 +271,7 @@ local function unlock_group_flood(msg, data, target)
   else
     data[tostring(target)]['settings']['flood'] = 'no'
     save_data(_config.moderation.data, data)
-    return reply_msg(msg.id,"> #Spamming has been #unlocked", ok_cb, false)
+    return reply_msg(msg.id,"✅ Spamming has been unlocked", ok_cb, false)
   end
 end
 
@@ -285,7 +285,7 @@ local function lock_group_arabic(msg, data, target)
   else
     data[tostring(target)]['settings']['lock_arabic'] = 'yes'
     save_data(_config.moderation.data, data)
-    return reply_msg(msg.id,"> #Arabic/Persian has been #locked", ok_cb, false)
+    return reply_msg(msg.id,"✅ Arabic/Persian has been locked", ok_cb, false)
   end
 end
 
@@ -299,7 +299,7 @@ local function unlock_group_arabic(msg, data, target)
   else
     data[tostring(target)]['settings']['lock_arabic'] = 'no'
     save_data(_config.moderation.data, data)
-    return reply_msg(msg.id,"> #Arabic/Persian has been #unlocked", ok_cb, false)
+    return reply_msg(msg.id,"✅ Arabic/Persian has been unlocked", ok_cb, false)
   end
 end
 -- Tag Fanction by MehdiHS!
@@ -313,7 +313,7 @@ local function lock_group_tag(msg, data, target)
   else
     data[tostring(target)]['settings']['lock_tag'] = 'yes'
     save_data(_config.moderation.data, data)
-    return reply_msg(msg.id,"> #Tag has been #locked", ok_cb, false)
+    return reply_msg(msg.id,"✅ Tag has been locked", ok_cb, false)
   end
 end
 
@@ -327,7 +327,7 @@ local function unlock_group_tag(msg, data, target)
   else
     data[tostring(target)]['settings']['lock_tag'] = 'no'
     save_data(_config.moderation.data, data)
-    return reply_msg(msg.id,"> Tag has been #unlocked", ok_cb, false)
+    return reply_msg(msg.id,"✅ Tag has been unlocked", ok_cb, false)
   end
 end
 -- WebPage Fanction by MehdiHS!
@@ -341,7 +341,7 @@ local function lock_group_webpage(msg, data, target)
   else
     data[tostring(target)]['settings']['lock_webpage'] = 'yes'
     save_data(_config.moderation.data, data)
-    return reply_msg(msg.id,"> #WebLink posting has been #locked", ok_cb, false)
+    return reply_msg(msg.id,"✅ WebLink posting has been locked", ok_cb, false)
   end
 end
 
@@ -355,7 +355,7 @@ local function unlock_group_webpage(msg, data, target)
   else
     data[tostring(target)]['settings']['lock_webpage'] = 'no'
     save_data(_config.moderation.data, data)
-    return reply_msg(msg.id,"> #WebLink posting has been #unlocked", ok_cb, false)
+    return reply_msg(msg.id,"✅ WebLink posting has been unlocked", ok_cb, false)
   end
 end
 -- Anti Fwd Fanction by MehdiHS!
