@@ -1481,7 +1481,7 @@ local function run(msg, matches)
 				resolve_username(username,  callbackres, cbres_extra)
 			else
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] requested SuperGroup ID")
-				return reply_msg(msg.id, "> SuperGroup ID: "..msg.to.id.."\n> SuperGroup Name: "..msg.to.title.."\n> First Name: "..(msg.from.first_name or '').."\n> Last Name: "..(msg.from.last_name or '').."\n> Your ID: "..msg.from.id.."\n> Username: @"..(msg.from.username or '').."\n> Phone Number: +"..(msg.from.phone or '404 Not Found!').."\n> Your Link: Telegram.Me/"..(msg.from.username or '').."\n> Group Type: #SuperGroup", ok_cb, false)		end
+				return reply_msg(msg.id, "🎗 Info id:\n💠 SuperGroup ID: "..msg.to.id.."\n💠 SuperGroup Name: "..msg.to.title.."\n💠 First Name: "..(msg.from.first_name or '').."\n💠 Last Name: "..(msg.from.last_name or '').."\n💠 Your ID: "..msg.from.id.."\n💠 Username: @"..(msg.from.username or '').."\n💠 Phone Number: +"..(msg.from.phone or '404 Not Found!').."\n💠 Your Link: Telegram.Me/"..(msg.from.username or '').."\n💠 Group Type: #SuperGroup", ok_cb, false)		end
 		end
 
 		if matches[1] == 'kickme' then
