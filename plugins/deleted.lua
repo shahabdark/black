@@ -3,7 +3,7 @@ local receiver = cb_extra.receiver
  local msg = cb_extra.msg
   local deleted = 0 
 if success == 0 then
-send_large_msg(receiver, "first set me as admin!") 
+send_large_msg(receiver, "⛔️ first set me as admin!") 
 end
 for k,v in pairs(result) do
   if not v.first_name and not v.last_name then
