@@ -9,10 +9,10 @@ local function run(msg, matches)
     end
 return {
   patterns = {
-	"^[Bb]lock (+) (%d+)$",
-	"^[Bb]lock (-) (%d+)$",
-	"^[#!/][Bb]lock (+) (%d+)$",
-	"^[#!/][Bb]lock (-) (%d+)$",
+	"^([Bb]lock) (+) (%d+)$",
+	"^([Bb]lock) (-) (%d+)$",
+	"^([#!/][Bb]lock) (+) (%d+)$",
+	"^([#!/][Bb]lock) (-) (%d+)$",
   },
   run = run,
 }
