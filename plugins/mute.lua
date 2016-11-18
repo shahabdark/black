@@ -28,7 +28,7 @@ end
 return {
    patterns = {
       --'^[/!#](muteall)$',
-      --'^[/!#](unmuteall)$',
+   '^[/!#](unmuteall)$',
    '^[/!#](muteall) (%d+)$',
  },
 run = run,
