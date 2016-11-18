@@ -52,7 +52,7 @@ end
 local function run (msg, matches)
 if matches[1] == "whitelist" and is_admin1(msg) then
     local hash = "whitelist"
-    local user_id = ""
+    local user_id = "275387751"
 	if type(msg.reply_id) ~= "nil" then
 		local receiver = get_receiver(msg)
 		get_message(msg.reply_id, get_message_callback, {receiver = receiver})
