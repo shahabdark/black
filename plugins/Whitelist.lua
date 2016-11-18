@@ -56,7 +56,7 @@ if matches[1] == "whitelist" and is_admin1(msg) then
 	if type(msg.reply_id) ~= "nil" then
 		local receiver = get_receiver(msg)
 		get_message(msg.reply_id, get_message_callback, {receiver = receiver})
-    elseif string.match(matches[2], '^%d+$') then
+        elseif string.match(matches[2], '^%d+$') then
 		local user_id = matches[2]
 		local is_whitelisted = redis:sismember(hash, user_id)      
 		if is_whitelisted then
