@@ -34,7 +34,7 @@ end
     end)
  
   local arian = '0'
-  local text = 'users in this chat \n'
+  local text = '👤 users in this chat \n'
   for k,user in pairs(users_info) do
     --text = text..user.name..' = '..user.msgs..'\n'
       arian = arian + user.msgs
@@ -56,7 +56,7 @@ end
       local hashs = 'msgs:'..result.peer_id..':'..extra.msg.to.id
       local msgss = redis:get(hashs)
       local percent = msgss / r * 100
-    return send_large_msg(chatid, "Your name : "..name.."\nYou've sent : "..msgss.." ("..round2(percent).."%)\n  messages and this group has "..r.." messages.")
+    return send_large_msg(chatid, "👤 Your name : "..name.."\n📩 You've sent : "..msgss.." ("..round2(percent).."%)\n  messages and this group has "..r.." messages.")
 
     end
 end
