@@ -135,7 +135,7 @@ local function run(msg, matches)
 local support_id = msg.from.id
  if matches[1]:lower() == 'id' and msg.to.type == "chat" or msg.to.type == "user" then
     if msg.to.type == "user" then
-      return reply_msg(msg.id, "Bot ID > |"..msg.to.id.."|\nYour ID > |"..msg.from.id.."| ", ok_cb, false)	
+      return reply_msg(msg.id, "👾 Bot ID :"..msg.to.id.."\n👤 Your ID :"..msg.from.id.." ", ok_cb, false)	
     end
     if type(msg.reply_id) ~= "nil" then
       local print_name = user_print_name(msg.from):gsub("‮", "")
