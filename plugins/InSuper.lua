@@ -778,7 +778,7 @@ end
 		end
 	end
   local settings = data[tostring(target)]['settings']
-  local text = "SuperGroup settings:\n\nLock Links > "..settings.lock_link.."\nLock Webpage > "..settings.lock_webpage.."\nLock Tag > "..settings.lock_tag.."\nLock Emoji > "..settings.lock_emoji.."\nLock English > "..settings.lock_eng.."\nLock Badword > "..settings.lock_badw.."\nLock Flood > "..settings.flood.."\nFlood sensitivity > "..NUM_MSG_MAX.."\nLock Spam > "..settings.lock_spam.."\nLock Contacts > "..settings.lock_contacts.."\nLock Arabic/Persian > "..settings.lock_arabic.."\nLock Member > "..settings.lock_member.."\nLock RTL > "..settings.lock_rtl.."\nLock Forward > "..settings.lock_fwd.."\nLock TGservice > "..settings.lock_tgservice.."\nLock Sticker > "..settings.lock_sticker.."\nPublic > "..settings.public.."\nStrict Settings > "..settings.strict
+  local text = "🎗 settings:\n\n💠 Lock Links : "..settings.lock_link.."\n💠 Lock Webpage : "..settings.lock_webpage.."\n💠Lock Tag : "..settings.lock_tag.."\n💠 Lock Emoji : "..settings.lock_emoji.."\n💠 Lock English : "..settings.lock_eng.."\n💠 Lock Badword : "..settings.lock_badw.."\n💠 Lock Flood : "..settings.flood.."\n💠 Flood sensitivity : "..NUM_MSG_MAX.."\n💠 Lock Spam : "..settings.lock_spam.."\n💠 Lock Contacts : "..settings.lock_contacts.."\n💠 Lock Arabic/Persian : "..settings.lock_arabic.."\n💠 Lock Member : "..settings.lock_member.."\n💠 Lock RTL : "..settings.lock_rtl.."\n💠 Lock Forward : "..settings.lock_fwd.."\n💠 Lock TGservice : "..settings.lock_tgservice.."\n💠 Lock Sticker : "..settings.lock_sticker.."\n💠 Public : "..settings.public.."\n💠 Strict Settings : "..settings.strict
   reply_msg(msg.id, text, ok_cb, false)
 end
 
