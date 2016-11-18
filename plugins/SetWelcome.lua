@@ -21,7 +21,7 @@ local rules = data[tostring(msg.to.id)]['rules']
     
 if matches[1] == 'rules' and matches[2] and is_owner(msg) then
     if data[tostring(msg.to.id)]['rules'] == nil then --when no rules found....
-        return '⚠️ No Rules Found!\n\n💠 Set Rule first by /set rules [Text]\n💠 Or\💠 nset normal welcome by /setwlc [wlc msg]'
+        return '⚠️ No Rules Found!\n\n💠 Set Rule first by /set rules [Text]\n💠 Or\n💠 set normal welcome by /setwlc [wlc msg]'
 end
 data[tostring(msg.to.id)]['group_welcome'] = matches[2]..'\n\nGroup Rules :\n'..rules
         save_data(_config.moderation.data, data)
