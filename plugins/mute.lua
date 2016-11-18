@@ -16,13 +16,13 @@ local function run(msg, matches)
  else
  local num = tonumber(matches[2]) * 60
  redis:setex(hash, num, true)
- return "mute all has been enabled for |#"..matches[2].."#| minutes"
+ return "✅ mute all has been enabled for |"..matches[2].."| minutes"
  end
  end
 if matches[1] == 'unmuteall' and is_momod(msg) then
                local hash = 'muteall:'..msg.to.id
         redis:del(hash)
-          return "mute all has been disabled"
+          return "⛔️ mute all has been disabled"
   end
 end
 return {
