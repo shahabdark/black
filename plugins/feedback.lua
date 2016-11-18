@@ -9,7 +9,7 @@ function run(msg, matches)
    --like : local chat = "chat#id"..56693692
    
   local sends = send_msg(chat, fuse, ok_cb, false)
-  return 'Thanks For Your Feedback User ['..msg.from.id..']'
+  return '✅ Thanks For Your Feedback!\n🔴 User ['..msg.from.id..']'
  
  end
 
